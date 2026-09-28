@@ -1,6 +1,6 @@
-// T&T – Service Worker (T&T Mai Vy Tạo Lịch Âm Dương v1.0.3): mở được khi không có mạng, luôn ưu tiên bản mới nhất khi có mạng.
+// T&T – Service Worker (T&T Mai Vy Tạo Lịch Âm Dương v1.0.4): mở được khi không có mạng, luôn ưu tiên bản mới nhất khi có mạng.
 // KHÔNG lưu đệm các yêu cầu tới Google Gemini hay trang bên ngoài.
-const CACHE = 'tt-t-t-mai-vy-v1.0.3';
+const CACHE = 'tt-mai-vy-v1.0.4';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './apple-touch-icon.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
